@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    k8s-app: jitsi
+  name: jitsi
+  namespace: jitsi
+spec:
+  template:
+    metadata:
+      labels:
+        k8s-app: jitsi
+    spec:
+      containers:
+        - name: web
+          env:
+            - name: PUBLIC_URL
+              value: "https://solwinptp-evl-el7-wms-tmp-debug-tts.c.ptin.corppt.com"
+
+        - name: prosody
+          env:
+            - name: PUBLIC_URL
+              value: "https://solwinptp-evl-el7-wms-tmp-debug-tts.c.ptin.corppt.com"
