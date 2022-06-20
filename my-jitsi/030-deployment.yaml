@@ -123,6 +123,10 @@ spec:
               value: America/Los_Angeles
             - name: JVB_TCP_HARVESTER_DISABLED
               value: "true"
+            - name: VIDEOQUALITY_PREFERRED_CODEC
+              value: VP9
+            - name: P2P_PREFERRED_CODEC
+              value: VP9
         - name: jvb
           image: jitsi/jvb:stable-6726
           imagePullPolicy: IfNotPresent
@@ -217,7 +221,7 @@ spec:
             - name: JIGASI_PORT_MAX
               value: "20050"
             - name: TZ
-              value: America/Los_Angeles		
+              value: America/Los_Angeles
             - name: JICOFO_AUTH_USER
               value: focus
             - name: JICOFO_AUTH_PASSWORD
@@ -226,4 +230,3 @@ spec:
                   name: jitsi-config
                   key: JICOFO_AUTH_PASSWORD
       serviceAccountName: jitsi
- 
